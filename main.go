@@ -14,6 +14,9 @@ func main() {
 	http.HandleFunc("/hello", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Eve!")
 	})
+	http.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
+		return
+	})
 	if err := http.ListenAndServe(":80", nil); err != nil {
 		log.Fatal(err)
 	}
