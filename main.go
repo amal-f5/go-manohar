@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"unit.nginx.org/go"
 )
 
 func main() {
@@ -17,7 +18,7 @@ func main() {
 	http.HandleFunc("/favicon.ico", func(w http.ResponseWriter, r *http.Request) {
 		return
 	})
-	if err := http.ListenAndServe(":80", nil); err != nil {
+	if err := unit.ListenAndServe(":80", nil); err != nil {
 		log.Fatal(err)
 	}
 }
