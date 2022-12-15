@@ -19,7 +19,7 @@
         "name": "myrepo",
         "primary": {
             "name": "myrepo",
-            "branch": "dev",
+            "branch": "main",
             "uri": "https://github.com/amal-f5/go-manohar.git",
             "type": "repository"
         }
